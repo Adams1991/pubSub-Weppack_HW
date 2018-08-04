@@ -13,7 +13,7 @@ ResultView.prototype.bindEvents = function () {
 
 ResultView.prototype.displayResult = function (result) {
   const resultElement = document.querySelector('#result');
-  resultElement.textContent = "Yes! It's a prime number.";
+  resultElement.textContent = 'You typed 4';
 };
 
 module.exports = ResultView;
