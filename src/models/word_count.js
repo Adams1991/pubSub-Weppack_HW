@@ -5,7 +5,7 @@ const WordCounter = function() {
 };
 
 WordCounter.prototype.bindEvents = function () {
-  PubSub.subscribe('FormView:text-inputted', (event) => {
+  PubSub.subscribe('InputView:text-inputted', (event) => {
     const inputtedtext = event.detail;
     const result = this.wordCount(inputtedtext);
     PubSub.publish('WordCounter:result', result);
