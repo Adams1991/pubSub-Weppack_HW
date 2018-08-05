@@ -13,7 +13,11 @@ ResultView.prototype.bindEvents = function () {
 
 ResultView.prototype.displayResult = function (result) {
   const resultElement = document.querySelector('#result');
-  resultElement.textContent = `You typed ${result} words`;
+  if (result === 1) {
+      resultElement.textContent = `You typed ${result} word`;
+  } else {
+      resultElement.textContent = `You typed ${result} words`;
+  }
 };
 
 module.exports = ResultView;
