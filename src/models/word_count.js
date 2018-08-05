@@ -13,8 +13,10 @@ WordCounter.prototype.bindEvents = function () {
 };
 
 WordCounter.prototype.wordCount = function (words) {
-  const stringArray = words.split(' ');
+  let stringArray = words.split(' ').filter(function(n) { return n != '' });
   return stringArray.length;
 };
+
+
 
 module.exports = WordCounter;
